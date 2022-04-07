@@ -149,6 +149,11 @@ int main( )
     //Model pokearriba((char*)"Models/pokeball/pokearriba.obj");
     //Model pokeabajo((char*)"Models/pokeball/pokeabajo.obj");
     Model mesadeCentro((char*)"Models/mesas/mesadeCentro.obj");
+    Model chimenea((char*)"Models/chimenea/chemny.obj");
+
+
+
+
     GLuint texture;
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);
@@ -207,10 +212,12 @@ int main( )
         model = glm::rotate(model, glm::radians(rot), glm::vec3(1.0f, 0.0f, 0.0f));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         mesadeCentro.Draw(shader);
-        /*model = glm::mat4(1);
-        
+
+        model = glm::mat4(1);
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        pokeabajo.Draw(shader);*/
+        chimenea.Draw(shader);
+       
 
         glBindVertexArray(0);
 
