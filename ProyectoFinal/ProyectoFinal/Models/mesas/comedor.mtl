@@ -1,17 +1,9 @@
-newmtl FrontColor
-illum 4
-Kd 0.89 0.88 0.87
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-Ks 0.33 0.33 0.33
-Ns 0.06
-newmtl _1
+newmtl Wood_Cherry_Original
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd _1.jpg
+map_Kd madera.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06

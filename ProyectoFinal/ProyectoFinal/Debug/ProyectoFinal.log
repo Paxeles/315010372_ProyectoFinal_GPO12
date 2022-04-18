@@ -1,9 +1,9 @@
 ﻿  ProyectoFinal.cpp
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(187,30): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(332,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(333,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(337,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(338,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(340,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(341,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(188,30): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(339,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(340,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(344,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(345,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(347,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(348,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> C:\Users\axel_\Desktop\SEMESTRE22-2\CGIHC\Repositorio\315010372_ProyectoFinal_GPO12\ProyectoFinal\Debug\ProyectoFinal.exe
