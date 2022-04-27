@@ -151,6 +151,8 @@ int main( )
     Model mesadeCentro((char*)"Models/mesas/mesadeCentro.obj");
     Model chimenea((char*)"Models/chimenea/chemny.obj");
     Model comedor((char*)"Models/mesas/comedorconsillas.obj");
+    Model casa((char*)"Models/casa/casita.obj");
+    Model Piano((char*)"Models/piano/piano.obj");
 
 
 
@@ -215,14 +217,26 @@ int main( )
         mesadeCentro.Draw(shader);
 
         model = glm::mat4(1);
-        model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
+        //model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         chimenea.Draw(shader);
 
         model = glm::mat4(1);
-        model = glm::translate(model, glm::vec3(-5.0f, 0.0f, 0.0f));
+        //model = glm::translate(model, glm::vec3(-5.0f, 0.0f, 0.0f));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         comedor.Draw(shader);
+
+        model = glm::mat4(1);
+        //model = glm::translate(model, glm::vec3(-5.0f, 0.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        casa.Draw(shader);
+        model = glm::mat4(1);
+        //model = glm::translate(model, glm::vec3(-5.0f, 0.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        Piano.Draw(shader);
+
+
+
 
        
 
