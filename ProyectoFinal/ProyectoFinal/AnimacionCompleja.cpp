@@ -140,6 +140,7 @@ int main()
 	Model comedor((char*)"Models/mesas/comedorconsillas.obj");
 	Model casa((char*)"Models/casa/casita.obj");
 	Model Piano((char*)"Models/piano/piano.obj");
+	Model sofa((char*)"Models/sofa/sofa.obj");
 
 
 
@@ -477,6 +478,13 @@ int main()
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		chimenea.Draw(lightingShader);
+
+		// sofa
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		sofa.Draw(lightingShader);
 
 
 

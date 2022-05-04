@@ -33,6 +33,23 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
+newmtl Box041SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd SOFA_Couch_AlbedoTransparency.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl Box062SG
+illum 4
+Kd 0.80 0.80 0.80
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 10.30
 newmtl Color_B01
 illum 4
 Kd 1.00 0.25 0.00
@@ -307,6 +324,8 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
 newmtl lambert4SG
 illum 4
 Kd 0.00 0.00 0.00
@@ -335,6 +354,8 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd blanco.jpg
 Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
 newmtl lambert11SG
 illum 4
 Kd 0.00 0.00 0.00
@@ -342,6 +363,8 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd negro.jpg
 Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
 newmtl lambert12SG
 illum 4
 Kd 0.00 0.00 0.00
