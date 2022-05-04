@@ -141,6 +141,7 @@ int main()
 	Model casa((char*)"Models/casa/casita.obj");
 	Model Piano((char*)"Models/piano/piano.obj");
 	Model sofa((char*)"Models/sofa/sofa.obj");
+	Model piso((char*)"Models/piso/piso.obj");
 
 
 
@@ -450,6 +451,10 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0f, 1.0f, 1.0f, 1.0f);
 		casa.Draw(lightingShader);
+
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0f, 1.0f, 1.0f, 1.0f);
+		piso.Draw(lightingShader);
 
 
 		//piano
