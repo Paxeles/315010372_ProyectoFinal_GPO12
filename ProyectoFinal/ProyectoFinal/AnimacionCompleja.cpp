@@ -142,6 +142,7 @@ int main()
 	Model Piano((char*)"Models/piano/piano.obj");
 	Model sofa((char*)"Models/sofa/sofa.obj");
 	Model piso((char*)"Models/piso/piso.obj");
+	Model Dino1((char*)"Models/dinos/braquio.obj");
 
 
 
@@ -492,10 +493,13 @@ int main()
 		sofa.Draw(lightingShader);
 
 
+		//braquiosaurio
 
 
-
-		
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Dino1.Draw(lightingShader);
 	
 				
 		glBindVertexArray(0);
