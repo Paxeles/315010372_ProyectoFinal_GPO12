@@ -1,4 +1,81 @@
-newmtl Bark
+newmtl braquio:claws
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl braquio:eyeball
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.89 1.00 0.81
+Ns 50.00
+newmtl braquio:mouth
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl braquio:skin
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl braquio:spikes
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl braquio:teeth
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl braquio:tongue
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl casita:Bark
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -7,7 +84,7 @@ map_Kd bark_brown_01_diff_1k.png
 Ni 1.45
 Ks 0.00 0.00 0.00
 Ns 250.00
-newmtl Bark_001
+newmtl casita:Bark_001
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -16,7 +93,7 @@ map_Kd Smooth_Wood.jpg
 Ni 1.45
 Ks 0.00 0.00 0.00
 Ns 250.00
-newmtl Barrel_mat
+newmtl casita:Barrel_mat
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -25,7 +102,7 @@ map_Kd barrel_Low_DefaultMaterial_Diffuse.jpg
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Bolts
+newmtl casita:Bolts
 illum 4
 Kd 0.80 0.80 0.80
 Ka 1.00 1.00 1.00
@@ -33,7 +110,24 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Color_B01
+newmtl casita:Box041SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd SOFA_Couch_AlbedoTransparency.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl casita:Box062SG
+illum 4
+Kd 0.80 0.80 0.80
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 10.30
+newmtl casita:Color_B01
 illum 4
 Kd 1.00 0.25 0.00
 Ka 0.00 0.00 0.00
@@ -41,7 +135,7 @@ Tf 0.32 0.32 0.32
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl Color_C01
+newmtl casita:Color_C01
 illum 4
 Kd 1.00 0.49 0.00
 Ka 0.00 0.00 0.00
@@ -49,7 +143,7 @@ Tf 0.30 0.30 0.30
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl CounterEdge
+newmtl casita:CounterEdge
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -58,7 +152,7 @@ map_Kd CounterEdge.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl CounterSurface
+newmtl casita:CounterSurface
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -67,7 +161,7 @@ map_Kd CounterSurface.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl Crate1
+newmtl casita:Crate1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -76,7 +170,7 @@ map_Kd Crate1.png
 Ni 1.00
 Ks 0.00 0.00 0.00
 Ns 250.00
-newmtl Crate2
+newmtl casita:Crate3
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -85,7 +179,7 @@ map_Kd Crate1.png
 Ni 1.00
 Ks 0.00 0.00 0.00
 Ns 250.00
-newmtl Dome
+newmtl casita:Dome
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.28 0.28 0.28
@@ -94,7 +188,7 @@ map_Kd Rust.jpg
 Ni 1.45
 Ks 0.79 0.79 0.79
 Ns 562.50
-newmtl Door_material
+newmtl casita:Door_material
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -103,7 +197,7 @@ map_Kd Smooth_Wood_(dark).jpg
 Ni 1.45
 Ks 0.00 0.00 0.00
 Ns 250.00
-newmtl Glass
+newmtl casita:Glass
 illum 4
 Kd 0.80 0.80 0.80
 Ka 1.00 1.00 1.00
@@ -111,7 +205,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Handle_material
+newmtl casita:Handle_material
 illum 4
 Kd 0.58 0.56 0.74
 Ka 1.00 1.00 1.00
@@ -119,7 +213,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl House_Planks
+newmtl casita:House_Planks
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -128,7 +222,7 @@ map_Kd House_Planks_COLOR.png
 Ni 1.45
 Ks 0.00 0.00 0.00
 Ns 250.00
-newmtl Lantern
+newmtl casita:Lantern
 illum 4
 Kd 0.80 0.09 0.07
 Ka 1.00 1.00 1.00
@@ -136,7 +230,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Light
+newmtl casita:Light
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -145,7 +239,7 @@ map_Kd House_Planks.jpg
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
-newmtl M_0029_BlanchedAlmond
+newmtl casita:M_0029_BlanchedAlmond
 illum 4
 Kd 1.00 0.96 0.91
 Ka 0.00 0.00 0.00
@@ -153,7 +247,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl Material_004
+newmtl casita:Material_004
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -162,7 +256,7 @@ map_Kd Granite_COLOR.png
 Ni 1.45
 Ks 0.50 0.50 0.50
 Ns 1000.00
-newmtl Material__1
+newmtl casita:Material__1
 illum 4
 Kd 0.60 0.60 0.60
 Ka 0.00 0.00 0.00
@@ -170,7 +264,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl Metal_Seamed
+newmtl casita:Metal_Seamed
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -179,14 +273,14 @@ map_Kd Metal_Seamed.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl RW_APBL_vert
+newmtl casita:RW_APBL_vert
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd RW_APBL_vert.jpg
 Ni 1.00
-newmtl Rings
+newmtl casita:Rings
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -195,7 +289,7 @@ map_Kd Rust.jpg
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Roof
+newmtl casita:Roof
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -204,7 +298,7 @@ map_Kd Roof_COLOR.png
 Ni 1.45
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl RustRim_Material_001
+newmtl casita:RustRim_Material_001
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -213,7 +307,7 @@ map_Kd OldWoodPlanks(1024).jpg
 Ni 1.45
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl SpokeWood_Material_001
+newmtl casita:SpokeWood_Material_001
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -222,7 +316,7 @@ map_Kd -o_5_5_TexturesCom_RustPaint0433_4_M.jpg
 Ni 1.45
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Vegetation_Bark_Maple2
+newmtl casita:Vegetation_Bark_Maple2
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -231,7 +325,7 @@ map_Kd Vegetation_Bark_Maple2.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl Window_Glass
+newmtl casita:Window_Glass
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -240,7 +334,7 @@ map_Kd ventana.jpg
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Window_Pane
+newmtl casita:Window_Pane
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
@@ -249,7 +343,7 @@ map_Kd Mixed_Rust.jpg
 Ni 1.45
 Ks 0.50 0.50 0.50
 Ns 250.00
-newmtl Wood_Cherry_Original
+newmtl casita:Wood_Cherry_Original
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -258,14 +352,14 @@ map_Kd madera.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl WoodenTable_01
+newmtl casita:WoodenTable_01
 illum 4
 Kd 0.00 0.00 0.00
 Ka 1.00 1.00 1.00
 Tf 1.00 1.00 1.00
 map_Kd madera.jpg
 Ni 1.45
-newmtl _3
+newmtl casita:_3
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -274,7 +368,7 @@ map_Kd _3.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl _79
+newmtl casita:_79
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -283,7 +377,7 @@ map_Kd _79.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl _81
+newmtl casita:_81
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -292,7 +386,7 @@ map_Kd _80.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl _Color_C01_1
+newmtl casita:_Color_C01_1
 illum 4
 Kd 1.00 0.49 0.00
 Ka 0.00 0.00 0.00
@@ -300,91 +394,97 @@ Tf 0.34 0.34 0.34
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
-newmtl lambert3SG
+newmtl casita:lambert3SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert4SG
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl casita:lambert4SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert5SG
+newmtl casita:lambert5SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert7SG
+newmtl casita:lambert7SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert10SG
+newmtl casita:lambert10SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd blanco.jpg
 Ni 1.00
-newmtl lambert11SG
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl casita:lambert11SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd negro.jpg
 Ni 1.00
-newmtl lambert12SG
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl casita:lambert12SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd dorado.jpg
 Ni 1.00
-newmtl lambert13SG
+newmtl casita:lambert13SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert14SG
+newmtl casita:lambert14SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert15SG
+newmtl casita:lambert15SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert16SG
+newmtl casita:lambert16SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert17SG
+newmtl casita:lambert17SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl silla_Wood_Cherry_Original
+newmtl casita:silla_Wood_Cherry_Original
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -393,3 +493,10 @@ map_Kd madera.jpg
 Ni 1.00
 Ks 0.33 0.33 0.33
 Ns 0.06
+newmtl initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TrexEyeColor.jpg
+Ni 1.00

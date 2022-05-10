@@ -139,10 +139,18 @@ int main()
 	Model chimenea((char*)"Models/chimenea/chemny.obj");
 	Model comedor((char*)"Models/mesas/comedorconsillas.obj");
 	Model casa((char*)"Models/casa/casita.obj");
+	Model puertaDelantera((char*)"Models/casa/puertaDelantera.obj");
 	Model Piano((char*)"Models/piano/piano.obj");
 	Model sofa((char*)"Models/sofa/sofa.obj");
 	Model piso((char*)"Models/piso/piso.obj");
 	Model Dino1((char*)"Models/dinos/braquio.obj");
+	Model lambo((char*)"Models/carro1/lambo.obj");
+	Model MandibulaBraquio((char*)"Models/dinos/MandibulaBraquio.obj");
+	Model PuertaEstabloDer((char*)"Models/casa/PestabloDer.obj");
+	Model PuertaEstabloIzq((char*)"Models/casa/PestabloIzq.obj");
+	Model Trex((char*)"Models/dinos/Trex.obj");
+	Model colaTrex((char*)"Models/dinos/colaTrex.obj");
+	
 
 
 
@@ -453,44 +461,62 @@ int main()
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0f, 1.0f, 1.0f, 1.0f);
 		casa.Draw(lightingShader);
 
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		puertaDelantera.Draw(lightingShader);
+
+		//Puertas Establo
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		PuertaEstabloDer.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		PuertaEstabloIzq.Draw(lightingShader);
+
+
+
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0f, 1.0f, 1.0f, 1.0f);
 		piso.Draw(lightingShader);
 
 
-		//piano
-		view = camera.GetViewMatrix();
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Piano.Draw(lightingShader);
+		////piano
+		//view = camera.GetViewMatrix();
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//Piano.Draw(lightingShader);
 
 
-		//comedor
-		view = camera.GetViewMatrix();
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		comedor.Draw(lightingShader);
+		////comedor
+		//view = camera.GetViewMatrix();
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//comedor.Draw(lightingShader);
 
-		//mesa de centro
+		////mesa de centro
 
-		view = camera.GetViewMatrix();
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		mesadeCentro.Draw(lightingShader);
+		//view = camera.GetViewMatrix();
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//mesadeCentro.Draw(lightingShader);
 
-		//chimenea
+		////chimenea
 
-		view = camera.GetViewMatrix();
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		chimenea.Draw(lightingShader);
+		//view = camera.GetViewMatrix();
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//chimenea.Draw(lightingShader);
 
-		// sofa
+		//// sofa
 
-		view = camera.GetViewMatrix();
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		sofa.Draw(lightingShader);
+		//view = camera.GetViewMatrix();
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//sofa.Draw(lightingShader);
 
 
 		//braquiosaurio
@@ -500,11 +526,31 @@ int main()
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Dino1.Draw(lightingShader);
-	
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		MandibulaBraquio.Draw(lightingShader);
 				
 		glBindVertexArray(0);
 
+		//auto
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		lambo.Draw(lightingShader);
+
+		//trex
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Trex.Draw(lightingShader);
 		
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		colaTrex.Draw(lightingShader);
 
 
 		// Also draw the lamp object, again binding the appropriate shader
