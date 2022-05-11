@@ -1,0 +1,78 @@
+newmtl goku:ClothesFront
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tw_goku.jpg
+map_Ka tw_goku.jpg
+Ni 1.50
+Ks 0.38 0.38 0.38
+Ns 20.00
+newmtl goku:cloth_black
+illum 4
+Kd 0.16 0.16 0.16
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.45 0.45 0.45
+Ns 20.00
+newmtl goku:ears
+illum 4
+Kd 0.97 0.79 0.67
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.38 0.38 0.38
+Ns 20.00
+newmtl goku:face
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd tw_goku.jpg
+map_Ka tw_goku.jpg
+Ni 1.50
+Ks 0.38 0.38 0.38
+Ns 20.00
+newmtl goku:hair
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negro.png
+Ni 1.50
+Ks 0.03 0.03 0.03
+Ns 50.00
+newmtl goku:shoe
+illum 4
+Kd 0.25 0.25 0.75
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.15 0.15 0.15
+Ns 20.00
+newmtl goku:skin
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd piel.png
+Ni 1.50
+Ks 0.38 0.38 0.38
+Ns 20.00
+newmtl goku:socks
+illum 4
+Kd 0.75 0.75 0.75
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.15 0.15 0.15
+Ns 20.00
+newmtl goku:sole
+illum 4
+Kd 0.22 0.22 0.22
+Ka 0.22 0.22 0.22
+Tf 1.00 1.00 1.00
+Ni 1.50
+Ks 0.08 0.08 0.08
+Ns 10.00

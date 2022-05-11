@@ -36,7 +36,7 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
-Camera  camera(glm::vec3(-20.0f, 2.0f, -45.0f));
+Camera  camera(glm::vec3(0.0f, 0.0f, 0.0f));
 GLfloat lastX = WIDTH / 2.0;
 GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
@@ -78,14 +78,14 @@ typedef struct _frame
 	float incX;		//Variable para IncrementoX
 	float incY;		//Variable para IncrementoY
 	float incZ;		//Variable para IncrementoZ
-	float rotRodIzq;
-	float rotRodDer;
+	/*float rotRodIzq;
+	float rotRodDer;*/
 	float rotInc2;
 	float rotInc;
 	float rotBrazoIzq;
 	float rotBrazoDer;
-	float rotInc3;
-	float rotInc4;
+	/*float rotInc3;
+	float rotInc4;*/
 
 
 
@@ -118,8 +118,8 @@ void saveFrame(void)
 	KeyFrame[FrameIndex].posY = posY;
 	KeyFrame[FrameIndex].posZ = posZ;
 	
-	KeyFrame[FrameIndex].rotRodIzq = rotRodIzq;
-	KeyFrame[FrameIndex].rotRodDer = rotRodDer;
+	/*KeyFrame[FrameIndex].rotRodIzq = rotRodIzq;
+	KeyFrame[FrameIndex].rotRodDer = rotRodDer;*/
 	KeyFrame[FrameIndex].rotBrazoDer = rotBrazoDer;
 	KeyFrame[FrameIndex].rotBrazoIzq = rotBrazoIzq;
 	
@@ -133,8 +133,8 @@ void resetElements(void)
 	posY = KeyFrame[0].posY;
 	posZ = KeyFrame[0].posZ;
 
-	rotRodIzq = KeyFrame[0].rotRodIzq;
-	rotRodDer = KeyFrame[0].rotRodDer;
+	/*rotRodIzq = KeyFrame[0].rotRodIzq;
+	rotRodDer = KeyFrame[0].rotRodDer;*/
 	rotBrazoDer = KeyFrame[0].rotBrazoDer;
 	rotBrazoIzq = KeyFrame[0].rotBrazoIzq;
 
@@ -149,8 +149,8 @@ void interpolation(void)
 	
 	KeyFrame[playIndex].rotInc = (KeyFrame[playIndex + 1].rotRodIzq - KeyFrame[playIndex].rotRodIzq) / i_max_steps;
 	KeyFrame[playIndex].rotInc2 = (KeyFrame[playIndex + 1].rotRodDer - KeyFrame[playIndex].rotRodDer) / i_max_steps;
-	KeyFrame[playIndex].rotInc3= (KeyFrame[playIndex + 1].rotBrazoDer - KeyFrame[playIndex].rotBrazoDer) / i_max_steps;
-	KeyFrame[playIndex].rotInc4 = (KeyFrame[playIndex + 1].rotBrazoIzq - KeyFrame[playIndex].rotBrazoIzq) / i_max_steps;
+	/*KeyFrame[playIndex].rotInc3= (KeyFrame[playIndex + 1].rotBrazoDer - KeyFrame[playIndex].rotBrazoDer) / i_max_steps;
+	KeyFrame[playIndex].rotInc4 = (KeyFrame[playIndex + 1].rotBrazoIzq - KeyFrame[playIndex].rotBrazoIzq) / i_max_steps;*/
 
 
 
@@ -237,6 +237,9 @@ int main()
 	Model PuertaEstabloIzq((char*)"Models/casa/PestabloIzq.obj");
 	Model Trex((char*)"Models/dinos/Trex.obj");
 	Model colaTrex((char*)"Models/dinos/colaTrex.obj");
+	Model goku((char*)"Models/goku/goku.obj");
+	Model LAgoku((char*)"Models/goku/LAgoku.obj");
+	Model RAgoku((char*)"Models/goku/RAgoku.obj");
 
 
 
@@ -254,12 +257,12 @@ int main()
 		KeyFrame[i].incX = 0;
 		KeyFrame[i].incY = 0;
 		KeyFrame[i].incZ = 0;
-		KeyFrame[i].rotRodIzq = 0;
-		KeyFrame[i].rotRodDer = 0;
+		/*KeyFrame[i].rotRodIzq = 0;
+		KeyFrame[i].rotRodDer = 0;*/
 		KeyFrame[i].rotInc = 0;
 		KeyFrame[i].rotInc2 = 0;
-		KeyFrame[i].rotInc3 = 0;
-		KeyFrame[i].rotInc4 = 0;
+		/*KeyFrame[i].rotInc3 = 0;
+		KeyFrame[i].rotInc4 = 0;*/
 	}
 
 
@@ -633,9 +636,39 @@ int main()
 		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		//Cabeza.Draw(lightingShader);
 
+		//personaje
+		
+
+		view = camera.GetViewMatrix();
+		glm::mat4 model(1);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(1.0f, .30f, -1.0f));
+		model = glm::translate(model, glm::vec3(posX, posY, posZ));
+		model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		goku.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(1.0f, .30f, -1.0f));
+
+
+		/*model = glm::rotate(model, glm::radians(rotColaTrex), glm::vec3(0.0f, 1.0f, .0f));*/
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		LAgoku.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(1.0f, .30f, -1.0f));
+
+
+		/*model = glm::rotate(model, glm::radians(rotColaTrex), glm::vec3(0.0f, 1.0f, .0f));*/
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		RAgoku.Draw(lightingShader);
+
 
 		// Draw the loaded model
-		glm::mat4 model(1);
+		/*glm::mat4 model(1);*/
 
 
 
@@ -749,6 +782,7 @@ int main()
 		model = glm::rotate(model, glm::radians(rotColaTrex), glm::vec3(0.0f, 1.0f, .0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		colaTrex.Draw(lightingShader);
+
 		
 
 		glBindVertexArray(0);
@@ -855,8 +889,8 @@ void animacion()
 
 				rotRodIzq += KeyFrame[playIndex].rotInc;
 				rotRodDer += KeyFrame[playIndex].rotInc2;
-				rotBrazoDer += KeyFrame[playIndex].rotInc3;
-				rotBrazoIzq += KeyFrame[playIndex].rotInc4;
+				/*rotBrazoDer += KeyFrame[playIndex].rotInc3;
+				rotBrazoIzq += KeyFrame[playIndex].rotInc4;*/
 				i_curr_steps++;
 			}
 
@@ -1101,7 +1135,7 @@ void DoMovement()
 
 
 	//Mov Personaje
-	/*if (keys[GLFW_KEY_H])
+	if (keys[GLFW_KEY_H])
 	{
 		posZ += 1;
 	}
@@ -1119,7 +1153,7 @@ void DoMovement()
 	if (keys[GLFW_KEY_J])
 	{
 		posX += 1;
-	}*/
+	}
 
 
 
