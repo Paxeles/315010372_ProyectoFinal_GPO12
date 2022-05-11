@@ -36,14 +36,22 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
-Camera  camera(glm::vec3(-100.0f, 2.0f, -45.0f));
+Camera  camera(glm::vec3(-20.0f, 2.0f, -45.0f));
 GLfloat lastX = WIDTH / 2.0;
 GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
 bool firstMouse = true;
 float range = 0.0f;
-float rot = 0.0f;
+float rotAuto = 0.0f;
+float rotColaTrex = 0.0f;
+float rotMandBraquio = 0.0f;
 
+
+bool animAuto = false;
+bool animColaTrex = false;
+bool animColaTrex2 = false;
+bool animMandBraquio = false;
+bool animMandBraquio2 = false;
 
 // Light attributes
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
@@ -163,7 +171,7 @@ int main()
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Practica 11", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "315010372_ProyectoFinal_GPO12", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
@@ -707,11 +715,14 @@ int main()
 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-6.0f, 8.0f, 9.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Dino1.Draw(lightingShader);
 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-6.0f, 8.0f, 9.0f));
+		model = glm::rotate(model, glm::radians(rotMandBraquio), glm::vec3(1.0f, 0.0f, .0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		MandibulaBraquio.Draw(lightingShader);
 
@@ -720,17 +731,22 @@ int main()
 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(00.0f,.0f,8.0f));
+		model = glm::rotate(model, glm::radians(rotAuto), glm::vec3(0.0f, 1.0f, .0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		lambo.Draw(lightingShader);
 
 		//trex
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(6.0f, 5.0f, .0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Trex.Draw(lightingShader);
 
 		view = camera.GetViewMatrix();
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(6.0f, 5.0f, .0f));
+		model = glm::rotate(model, glm::radians(rotColaTrex), glm::vec3(0.0f, 1.0f, .0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		colaTrex.Draw(lightingShader);
 		
@@ -785,6 +801,7 @@ int main()
 
 		// Swap the screen buffers
 		glfwSwapBuffers(window);
+
 	}
 
 
@@ -930,7 +947,65 @@ void MouseCallback(GLFWwindow *window, double xPos, double yPos)
 void DoMovement()
 {
 
-	if (keys[GLFW_KEY_1])
+
+
+	//configuracion de animaciones
+
+	//auto
+	if (animAuto)
+	{
+		rotAuto = (float)glfwGetTime() * 100.0f;
+	}
+
+	//T-rex
+
+	if (animColaTrex)
+	{
+		if (rotColaTrex < 12.0f) {
+			rotColaTrex += .05f;
+			if (rotColaTrex > 11.0f) {
+				animColaTrex2 = true;
+				animColaTrex = false;
+
+
+			}
+		}
+	}
+
+
+	if (animColaTrex2)
+	{
+		if (rotColaTrex > -12.0f) {
+			rotColaTrex -= .05f;
+			if (rotColaTrex < -11.0f) {
+				animColaTrex = true;
+				animColaTrex2 = false;
+
+
+			}
+		}
+
+	}
+
+	//baquiosaurio
+
+	if (animMandBraquio)
+	{
+		if (rotMandBraquio < 35.0f) {
+			rotMandBraquio += .35f;
+		} animMandBraquio = false;
+
+	}
+	if (animMandBraquio2)
+	{
+		if (rotMandBraquio > 0) {
+			rotMandBraquio -= .35f;
+		} animMandBraquio2 = false;
+		
+	
+}
+
+	/*if (keys[GLFW_KEY_1])
 	{
 
 		rot += 1;
@@ -987,12 +1062,46 @@ void DoMovement()
 	{
 		if (rotBrazoIzq > -90)
 			rotBrazoIzq -= 1.0f;
-	}
+	}*/
+
+
 
 	
+	//activar animaciones
+	//auto
+	if (keys[GLFW_KEY_1])
+	{
+		animAuto = true;
+	}   rotAuto = rotAuto;
+	if (keys[GLFW_KEY_2])
+	{
+		animAuto = false;
+	}
+	if (keys[GLFW_KEY_3])
+	{
+		animColaTrex = true;
+	}
+	if (keys[GLFW_KEY_4])
+	{
+		animColaTrex = false;
+		animColaTrex2 = false;
+	}
+
+	if (keys[GLFW_KEY_5])
+	{
+		animMandBraquio = true;
+	}
+
+	if (keys[GLFW_KEY_6])
+	{
+		animMandBraquio2 = true;
+	}
+
+
+
 
 	//Mov Personaje
-	if (keys[GLFW_KEY_H])
+	/*if (keys[GLFW_KEY_H])
 	{
 		posZ += 1;
 	}
@@ -1010,7 +1119,7 @@ void DoMovement()
 	if (keys[GLFW_KEY_J])
 	{
 		posX += 1;
-	}
+	}*/
 
 
 

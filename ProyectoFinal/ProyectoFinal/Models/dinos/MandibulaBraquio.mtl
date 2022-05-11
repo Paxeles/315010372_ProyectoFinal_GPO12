@@ -1,4 +1,4 @@
-newmtl braquio:claws
+newmtl MandibulaBraquio:mouth
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -9,18 +9,7 @@ bump  -bm 0 DR_Brachio_B.jpg
 Ni 1.50
 Ks 0.00 0.00 0.00
 Ns 0.00
-newmtl braquio:eyeball
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd DR_Brachio_C.jpg
-map_Ka DR_Brachio_C.jpg
-bump  -bm 0 DR_Brachio_B.jpg
-Ni 1.50
-Ks 0.89 1.00 0.81
-Ns 50.00
-newmtl braquio:mouth
+newmtl MandibulaBraquio:skin
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -31,7 +20,7 @@ bump  -bm 0 DR_Brachio_B.jpg
 Ni 1.50
 Ks 0.00 0.00 0.00
 Ns 0.00
-newmtl braquio:skin
+newmtl MandibulaBraquio:teeth
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -42,7 +31,7 @@ bump  -bm 0 DR_Brachio_B.jpg
 Ni 1.50
 Ks 0.00 0.00 0.00
 Ns 0.00
-newmtl braquio:spikes
+newmtl MandibulaBraquio:tongue
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -53,32 +42,42 @@ bump  -bm 0 DR_Brachio_B.jpg
 Ni 1.50
 Ks 0.00 0.00 0.00
 Ns 0.00
-newmtl braquio:teeth
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd DR_Brachio_C.jpg
-map_Ka DR_Brachio_C.jpg
-bump  -bm 0 DR_Brachio_B.jpg
-Ni 1.50
-Ks 0.00 0.00 0.00
-Ns 0.00
-newmtl braquio:tongue
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd DR_Brachio_C.jpg
-map_Ka DR_Brachio_C.jpg
-bump  -bm 0 DR_Brachio_B.jpg
-Ni 1.50
-Ks 0.00 0.00 0.00
-Ns 0.00
-newmtl initialShadingGroup
+newmtl braqui:initialShadingGroup
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd TrexEyeColor.jpg
 Ni 1.00
+newmtl braqui:mouth
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl braqui:phong2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TrexTooth.png
+bump  -bm 0.4 TrexTooth.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl braqui:skin
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DR_Brachio_C.jpg
+map_Ka DR_Brachio_C.jpg
+bump  -bm 0 DR_Brachio_B.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 0.00
