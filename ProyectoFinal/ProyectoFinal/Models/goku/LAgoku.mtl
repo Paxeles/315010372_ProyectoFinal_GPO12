@@ -1,3 +1,39 @@
+newmtl LAgoku:cloth_black
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negro.png
+Ni 1.50
+Ks 0.45 0.45 0.45
+Ns 20.00
+newmtl LAgoku:skin
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd piel.png
+Ni 1.50
+Ks 0.38 0.38 0.38
+Ns 20.00
+newmtl RAgoku:cloth_black
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negro.png
+Ni 1.50
+Ks 0.45 0.45 0.45
+Ns 20.00
+newmtl RAgoku:skin
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd piel.png
+Ni 1.50
+Ks 0.38 0.38 0.38
+Ns 20.00
 newmtl goku:ClothesFront
 illum 4
 Kd 0.00 0.00 0.00
@@ -50,15 +86,6 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.50
 Ks 0.15 0.15 0.15
-Ns 20.00
-newmtl goku:skin
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd piel.png
-Ni 1.50
-Ks 0.38 0.38 0.38
 Ns 20.00
 newmtl goku:socks
 illum 4
