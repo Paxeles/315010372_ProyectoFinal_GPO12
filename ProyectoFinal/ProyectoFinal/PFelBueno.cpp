@@ -24,6 +24,7 @@
 #include "Camera.h"
 #include "Model.h"
 #include "Texture.h"
+#include "modelAnim.h"
 
 // Function prototypes
 void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode);
@@ -216,6 +217,7 @@ int main()
 	Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
 	Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
 	Shader Anim("Shaders/anim.vs", "Shaders/anim.frag");
+	Shader animShader("Shaders/animSk.vs", "Shaders/animSk.frag");
 
 	/*Model BotaDer((char*)"Models/Personaje/bota.obj");
 	Model PiernaDer((char*)"Models/Personaje/piernader.obj");
@@ -245,7 +247,10 @@ int main()
 	Model RAgoku((char*)"Models/goku/RAgoku.obj");
 	//Model camioneta((char*)"Models/carro1/jeep.obj"); ---> causa problemas de compilacion
 
-
+	//Modelo de animación
+	ModelAnim animacionPersonaje("Animaciones/Personaje3/HipHop.dae");
+	animacionPersonaje.initShaders(animShader.Program);
+	//Inicialización de KeyFrames
 
 
 
@@ -771,6 +776,35 @@ int main()
 		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
 		sea.Draw(Anim);
 		glBindVertexArray(0);
+
+
+		/*_______________________________Personaje Animado___________________________*/
+		animShader.Use();
+		modelLoc = glGetUniformLocation(animShader.Program, "model");
+		viewLoc = glGetUniformLocation(animShader.Program, "view");
+		projLoc = glGetUniformLocation(animShader.Program, "projection");
+
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+
+		glUniform3f(glGetUniformLocation(animShader.Program, "material.specular"), 0.5f, 0.5f, 0.5f);
+		glUniform1f(glGetUniformLocation(animShader.Program, "material.shininess"), 32.0f);
+		glUniform3f(glGetUniformLocation(animShader.Program, "light.ambient"), 0.0f, 1.0f, 1.0f);
+		glUniform3f(glGetUniformLocation(animShader.Program, "light.diffuse"), 0.0f, 1.0f, 1.0f);
+		glUniform3f(glGetUniformLocation(animShader.Program, "light.specular"), 0.5f, 0.5f, 0.5f);
+		glUniform3f(glGetUniformLocation(animShader.Program, "light.direction"), 0.0f, -1.0f, -1.0f);
+		view = camera.GetViewMatrix();
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(PosIni.x -5.0f, PosIni.y-5.0f, PosIni.z));
+		model = glm::scale(model, glm::vec3(0.003f));	// it's a bit too big for our scene, so scale it down
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		animacionPersonaje.Draw(animShader);
+		glBindVertexArray(0);
+
+
+
+
 
 		// Draw skybox as last
 		glDepthFunc(GL_LEQUAL);  // Change depth function so depth test passes when values are equal to depth buffer's content
