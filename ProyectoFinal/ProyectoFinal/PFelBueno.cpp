@@ -248,7 +248,7 @@ int main()
 	//Model camioneta((char*)"Models/carro1/jeep.obj"); ---> causa problemas de compilacion
 
 	//Modelo de animación
-	ModelAnim animacionPersonaje("Animaciones/Personaje3/HipHop.dae");
+	ModelAnim animacionPersonaje("Animaciones/Personaje4/Salute.dae");
 	animacionPersonaje.initShaders(animShader.Program);
 	//Inicialización de KeyFrames
 
@@ -266,12 +266,9 @@ int main()
 		KeyFrame[i].incX = 0;
 		KeyFrame[i].incY = 0;
 		KeyFrame[i].incZ = 0;
-		/*KeyFrame[i].rotRodIzq = 0;
-		KeyFrame[i].rotRodDer = 0;*/
 		KeyFrame[i].rotInc = 0;
 		KeyFrame[i].rotInc2 = 0;
-		/*KeyFrame[i].rotInc3 = 0;
-		KeyFrame[i].rotInc4 = 0;*/
+	
 	}
 
 
@@ -796,7 +793,7 @@ int main()
 		view = camera.GetViewMatrix();
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(PosIni.x -5.0f, PosIni.y-5.0f, PosIni.z));
+		model = glm::translate(model, glm::vec3(PosIni.x, PosIni.y-4.95f, PosIni.z-1.0f));
 		model = glm::scale(model, glm::vec3(0.003f));	// it's a bit too big for our scene, so scale it down
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		animacionPersonaje.Draw(animShader);
