@@ -1,0 +1,45 @@
+newmtl arbol:Bark_003
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd bark_brown_01_diff_1k.png
+Ni 1.45
+Ks 0.00 0.00 0.00
+Ns 250.00
+newmtl arbol:Material_003
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd Alpha_Masked_LEaf.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 250.00
+newmtl granero:Bark
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd bark_brown_01_diff_1k.png
+Ni 1.45
+Ks 0.00 0.00 0.00
+Ns 250.00
+newmtl granero:Dome
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.28 0.28 0.28
+Tf 1.00 1.00 1.00
+map_Kd Rust.jpg
+Ni 1.45
+Ks 0.79 0.79 0.79
+Ns 562.50
+newmtl granero:House_Planks
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd House_Planks_COLOR.png
+Ni 1.45
+Ks 0.00 0.00 0.00
+Ns 250.00

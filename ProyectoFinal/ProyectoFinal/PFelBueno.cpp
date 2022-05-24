@@ -245,6 +245,11 @@ int main()
 	Model goku((char*)"Models/goku/goku.obj");
 	Model LAgoku((char*)"Models/goku/LAgoku.obj");
 	Model RAgoku((char*)"Models/goku/RAgoku.obj");
+	Model arbol1((char*)"Models/piso/arbol1.obj");
+	Model arbol2((char*)"Models/piso/arbol2.obj");
+	Model arbol3((char*)"Models/piso/arbol3.obj");
+	Model arbol4((char*)"Models/piso/arbol4.obj");
+	Model granero((char*)"Models/granero/granero.obj");
 	//Model camioneta((char*)"Models/carro1/jeep.obj"); ---> causa problemas de compilacion
 
 	//Modelo de animación
@@ -654,41 +659,6 @@ int main()
 		piso.Draw(lightingShader);
 
 
-		////piano
-		//view = camera.GetViewMatrix();
-		//model = glm::mat4(1);
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//Piano.Draw(lightingShader);
-
-
-		////comedor
-		//view = camera.GetViewMatrix();
-		//model = glm::mat4(1);
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//comedor.Draw(lightingShader);
-
-		////mesa de centro
-
-		//view = camera.GetViewMatrix();
-		//model = glm::mat4(1);
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//mesadeCentro.Draw(lightingShader);
-
-		////chimenea
-
-		//view = camera.GetViewMatrix();
-		//model = glm::mat4(1);
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//chimenea.Draw(lightingShader);
-
-		//// sofa
-
-		//view = camera.GetViewMatrix();
-		//model = glm::mat4(1);
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//sofa.Draw(lightingShader);
-
-
 		//braquiosaurio
 
 
@@ -728,6 +698,37 @@ int main()
 		model = glm::rotate(model, glm::radians(rotColaTrex), glm::vec3(0.0f, 1.0f, .0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		colaTrex.Draw(lightingShader);
+
+		//arboles
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbol1.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbol2.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbol3.Draw(lightingShader);
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbol4.Draw(lightingShader);
+
+		//granero
+
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		granero.Draw(lightingShader);
+
+
 
 		
 
